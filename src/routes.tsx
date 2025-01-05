@@ -3,30 +3,38 @@ import UserRegistrationContainer from "./modules/user-registration/container/Use
 import UserLoginContainer from "./modules/user-login/container/UserLoginContainer";
 import DashBoard from "./modules/landing-page/container/DashBoard";
 import MainLayout from "./shared/components/layout/MainLayout";
+import FromLocationPickerContainer from "./modules/ride-request/container/FromLocationPickerContainer";
+import ToLocationPickerContainer from "./modules/ride-request/container/ToLocationPickerContainer";
 
 export const routes = createBrowserRouter([
     {
-        path: '/',
+        path: '/ride',
         element: <MainLayout/>,
         children:[
+            
             {
-                path: "/",
-                element: <UserRegistrationContainer/>,
+                path: "/ride/request-from",
+                element: <FromLocationPickerContainer/>
             },
             {
-                path: "/login",
-                element: <UserLoginContainer/>
-            },
-            {
-                path: "/register",
-                element: <UserRegistrationContainer/>
-            },
+                path: "/ride/request-to",
+                element: <ToLocationPickerContainer/>
+            }
         ],
         
     },
     {
-        path: "/dashboard",
-        element: <DashBoard/>
-    }
+        path: "/",
+        element: <DashBoard/>,
+    },
+    {
+        path: "/login",
+        element: <UserLoginContainer/>
+    },
+    {
+        path: "/register",
+        element: <UserRegistrationContainer/>
+    },
+    
     
 ])

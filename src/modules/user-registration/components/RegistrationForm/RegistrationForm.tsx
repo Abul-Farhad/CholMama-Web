@@ -1,6 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IRegistrationForm } from "./RegistrationForm.interfaces";
-import LoginForm from "../../../user-login/components/LoginForm/LoginForm";
 import { Link } from "react-router";
 
 const RegistrationForm = () => {

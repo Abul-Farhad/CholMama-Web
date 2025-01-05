@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ILoginForm } from './LoginForm.interfaces';
+import { Link } from 'react-router';
 
 
 const LoginForm = () => {
@@ -51,7 +52,20 @@ const LoginForm = () => {
                 </label>
             </div>
             <div className="form-control mt-6">
-                <button className="btn btn-primary" type='submit' >Login</button>
+                <button className="btn btn-primary" type='submit' >
+                <span>
+                        <Link to={'/ride/request-from'}>Login</Link>
+                    </span>
+                </button>
+            </div>
+            <div className="text-center">
+                <p>
+                    Don't have an account? Click
+                    <span>
+                        <Link to={'/register'} className="underline ml-1 mr-1">here</Link>
+                    </span>
+                    to register.
+                </p>
             </div>
         </form>
     )

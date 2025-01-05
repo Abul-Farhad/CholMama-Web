@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+
 const DashBoard = () => {
     return (
         <div>
@@ -15,7 +17,10 @@ const DashBoard = () => {
                             We provide a safe and secure platform for you to share your ride.
                             Need a ride? Let's Chol Mama!
                         </p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to={"/login"}>
+                            <button className="btn btn-primary">Get Started</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
