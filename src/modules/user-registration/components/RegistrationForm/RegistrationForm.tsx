@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IRegistrationForm } from "./RegistrationForm.interfaces";
+import { Link } from "react-router";
 
 const RegistrationForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<IRegistrationForm>();
@@ -99,6 +100,15 @@ const RegistrationForm = () => {
             </div>
             <div className="form-control mt-6">
                 <button className="btn btn-primary" type='submit'>Register</button>
+            </div>
+            <div className="text-center">
+                <p>
+                    Already have an account? Click
+                    <span>
+                        <Link to={'/login'} className="underline ml-1 mr-1">here</Link>
+                    </span>
+                    to login.
+                </p>
             </div>
         </form>
     );
